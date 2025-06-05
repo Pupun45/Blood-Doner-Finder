@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .content-container {
+      padding-top: 2%;
+      padding-right: 35%;
+      padding-bottom: 10%;
+      padding-left: 15%;
+      max-height: 100%;
+      background-image: linear-gradient(
+        340deg,
+        hsl(348, 95%, 48%) 1%,
+        hsl(0, 67%, 51%) 43%,
+        hsl(0, 83%, 49%) 50%,
+        hsl(0, 40%, 61%) 51%,
+        hsl(0, 39%, 67%) 51%,
+        hsl(357, 37%, 72%) 49%,
+        hsl(356, 36%, 78%) 49%,
+        hsl(348, 31%, 84%) 50%,
+        hsl(143deg 23% 89%) 57%,
+        hsl(0deg 0% 95%) 99%
+      );
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type="submit"] {
+      margin-top: 10px;
+      background-color: #04aa6d;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1f1f1f;
+    }
+
+    .form-container {
+      margin-top: 10%;
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  </style>
+  <body>
+    <div style="padding-top: 20px" class="navbar">
+      <nav class="nava">
+        <ul class="nava">
+          <li class="nava"><a class="ind">Basic Blood Donor Finder</a></li>
+          <li class="nava"><a class="ind" href="index.html">Home</a></li>
+          <li class="nava">
+            <a class="ind" href="Avalible.html">Availability</a>
+          </li>
+          <li class="nava"><a class="ind" href="Doner.html">Donor</a></li>
+          <li class="nava"><a class="ind" href="Receiver.html">Receiver</a></li>
+          <li class="nava"><a class="ind" href="help.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content-container">
+      <div class="form-container">
+        <form action="process.php" method="post">
+          <input type="hidden" name="role" value="Help" />
+          <div class="row">
+            <div class="col-25">
+              <label for="name">Your Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name.."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="contact">Mobile No</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                placeholder="Mobile No"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="message">Explain Your Problem</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write something.."
+                style="height: 200px"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Important: tell process.php that this is the help form -->
+          <input type="hidden" name="help_submit" value="1" />
+
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

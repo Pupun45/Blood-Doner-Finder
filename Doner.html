@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make a Blood Relation</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <style>
+            body {
+                background-image: url('');
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            .footer {
+                position:relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #f8f9fa;
+                color: black;
+            }
+            .card {
+                 margin: 0 auto;
+                 float: none;
+             }
+             
+
+             body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 30px;
+            margin-left: 10%;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        </style>
+     </head>
+<body>
+    <!-- Navbar -->
+    <div style="padding-top: 20px;" class="navbar">
+        <nav class="nava">
+          <ul class="nava" >
+              <li class="nava"><a class="ind">Basic Blood Donor Finder</a></li>
+            <li class="nava"><a class="ind" href="index.html">Home</a></li>
+            <li class="nava"><a class="ind" href="Avalible.html">Availability</a></li>
+            <li class="nava"><a class="ind" href="Doner.html">Donor</a></li>
+            <li class="nava"><a class="ind" href="Receiver.html">Receiver</a></li>
+            <li class="nava"><a class="ind" href="help.html">Contact</a></li>
+          </ul>
+        </nav> 
+        </div>
+
+        <!-- 2nd -->
+    </nav>
+    <div class="container">
+    <h2 style="margin-top: 30px;">You Can/Can't Donate Blood</h2>
+
+    <table>
+    <thead>
+        <tr>
+        <th>CAN</th>
+        <th>CAN'T</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>1.If You are Fit and Healthy</td>
+        <td>1.If you have a cold,Sore throat or Flu</td>
+        </tr>
+        <tr>
+            <td>2.Age 18-70</td>
+            <td>2.If you have Chronic Infrctious Disease</td>
+        </tr>
+        <tr>
+            <td>3.Weight more than 45kgs</td>
+            <td>3.You are taking Antibiotics</td>
+        </tr>
+        <tr>
+            <td>4.If YOu've had no Operation in six months</td>
+            <td>4.If You had recent Surgery</td>
+        </tr>
+        <tr>
+            <td>5.Even if you have Cholesterol</td>
+            <td>5.You are Pregnant Or Breastfeeding</td>
+        </tr>
+        <tr>
+            <td>6.Even if you take blood pressure medication and your pressure is stable</td>
+            <td>6.You've Had an Extended Stay in Certain Countries</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    </div>
+    <!-- Form -->
+    <div class="container">
+        <h2>Blood Donor Form</h2>
+        <form name="donorForm"  action="process.php" method="post">
+            <input type="hidden" name="role" value="Doner">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact:</label>
+                <input type="text" class="form-control" id="contact" placeholder="Enter contact" name="contact">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="blood_group">Blood Group:</label>
+                <select class="form-control" id="blood_group" name="blood_group">
+                    <option value="a+">A+</option>
+                    <option value="a-">A-</option>
+                    <option value="b+">B+</option>
+                    <option value="b-">B-</option>
+                    <option value="o+">O+</option>
+                    <option value="o-">O-</option>
+                    <option value="ab+">AB+</option>
+                    <option value="ab-">AB-</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
